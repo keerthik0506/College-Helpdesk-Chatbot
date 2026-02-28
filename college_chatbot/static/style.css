@@ -1,0 +1,64 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+}
+
+.container {
+    width: 90%; max-width: 700px; background: white; border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1); overflow: hidden;
+}
+
+.chat-box {
+    height: 70vh; display: flex; flex-direction: column;
+}
+
+#messages {
+    flex: 1; padding: 25px; overflow-y: auto; background: #f8f9fa;
+}
+
+.user-message, .bot-message {
+    margin-bottom: 15px; padding: 15px 20px; border-radius: 20px;
+    max-width: 80%; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.user-message {
+    margin-left: auto; background: #667eea; color: white; text-align: right;
+}
+
+.bot-message {
+    background: white; border-left: 4px solid #667eea;
+}
+
+.input-area {
+    padding: 20px; background: #f1f3f4; display: flex; gap: 10px;
+}
+
+#userInput {
+    flex: 1; padding: 15px 20px; border: 2px solid #ddd; 
+    border-radius: 25px; font-size: 16px; outline: none;
+}
+
+#userInput:focus {
+    border-color: #667eea;
+}
+
+button {
+    padding: 15px 30px; background: #667eea; color: white;
+    border: none; border-radius: 25px; cursor: pointer; font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+code {
+    background: #667eea; color: white; padding: 2px 6px; 
+    border-radius: 4px; font-size: 14px; font-family: monospace;
+}
+
+strong {
+    color: #2d3748; font-weight: 600;
+}

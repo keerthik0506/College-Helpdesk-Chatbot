@@ -1,0 +1,73 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "namaste", "good morning", "good afternoon", "good evening"],
+      "responses": [
+        "Namaste! Welcome to College Helpdesk! How can I help? ",
+        "Hey there! What college question do you have?",
+        "Hello! Ready to solve your admission, fees, exam queries!"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "thank you bye"],
+      "responses": [
+        "Take care! Come back anytime!",
+        "Bye! All the best for studies!",
+        "See you soon! Keep shining!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "thnku"],
+      "responses": ["Youre welcome! Happy to help!", "My pleasure!", "Anytime!"]
+    },
+    {
+      "tag": "admission_process",
+      "patterns": ["admission process", "how to apply", "application procedure"],
+      "responses": [
+        "Simple 4 steps: 1. Online registration 2. Fill form 3. Upload documents 4. Pay Rs.1000 fee. Next intake: Jan 2027!"
+      ]
+    },
+    {
+      "tag": "btech_fees",
+      "patterns": ["btech fees", "cse fees", "engineering fees", "btech cost"],
+      "responses": ["B.Tech: Rs.1.5 Lakh/year. Total 4 years: Rs.6 Lakh. Hostel extra: Rs.60k/sem"]
+    },
+    {
+      "tag": "exam_dates",
+      "patterns": ["exam dates", "exam timetable", "when exams", "midterms"],
+      "responses": ["Midterms: March 15-20, Endterms: May 10-20. Full schedule on student portal!"]
+    },
+    {
+      "tag": "hostel_info",
+      "patterns": ["hostel", "hostel fees", "hostel admission", "pg"],
+      "responses": ["Hostel: Rs.60k/sem (includes 4 meals/day). Separate boys/girls. AC rooms. First come first serve!"]
+    },
+    {
+      "tag": "placements",
+      "patterns": ["placements", "placement stats", "companies visiting"],
+      "responses": ["85% placement rate! Highest: Rs.32LPA. Top companies: TCS, Infosys, Wipro, Accenture"]
+    },
+    {
+      "tag": "library",
+      "patterns": ["library", "library timings", "library hours"],
+      "responses": ["Library: 8AM-8PM weekdays, 10AM-4PM weekends. 50k+ books, 100 PCs, AC reading rooms"]
+    },
+    {
+      "tag": "menu",
+      "patterns": ["menu", "help", "options", "what can you do"],
+      "responses": [
+        "Available topics: Admissions, Fees, Exams, Hostel, Library, Placements, Canteen, Labs, WiFi, Clubs, Contacts"
+      ]
+    },
+    {
+      "tag": "not_found",
+      "patterns": ["what", "huh", "idk", "not sure"],
+      "responses": [
+        "Try: admission process, B.Tech fees, exam dates, hostel info, or type menu for all options!"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Helpdesk Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-box">
+            <div id="messages">
+                <div class="bot-message">
+                    Hi! I'm your College Helpdesk Bot! 
+                    <br>Ask about <strong>admissions, fees, exams, hostel</strong> 
+                    <br>or type <code>menu</code> for all options! 😊
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Ask about college..." autocomplete="off">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const messages = document.getElementById('messages');
+            const msg = input.value.trim();
+            
+            if (!msg) return;
+            
+            // User message
+            messages.innerHTML += `<div class="user-message">${msg}</div>`;
+            input.value = '';
+            
+            // Bot response
+            fetch('/get', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({msg: msg})
+            })
+            .then(res => res.json())
+            .then(data => {
+                messages.innerHTML += `<div class="bot-message">${data.response}</div>`;
+                messages.scrollTop = messages.scrollHeight;
+            });
+            
+            messages.scrollTop = messages.scrollHeight;
+            input.focus();
+        }
+        
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+        
+        // Focus input
+        document.getElementById('userInput').focus();
+    </script>
+</body>
+</html>
